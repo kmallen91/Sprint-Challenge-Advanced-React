@@ -15,6 +15,7 @@ const [darkMode, setDarkMode] = useDarkMode(false);
 
   return (
     <div className="App">
+    <h1> Top Searched Female Footballers </h1>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
