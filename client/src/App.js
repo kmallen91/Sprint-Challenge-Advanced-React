@@ -1,13 +1,29 @@
 import React from 'react';
 import './App.css';
 import PlayerList from "./components/playerList.js"
+import useDarkMode from './hooks/useDarkMode.js'
+
+
+
 
 function App() {
+const [darkMode, setDarkMode] = useDarkMode(false);
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="dark-mode__toggle">
+        <div
+          onClick={toggleMode}
+          className={darkMode ? 'toggle toggled' : 'toggle'}
+        > Dark Mode 
+        </div>
+      </div>
         <PlayerList />
-      </header>
+      
     </div>
   );
 }

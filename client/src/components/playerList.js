@@ -2,6 +2,9 @@ import React from "react"
 import axios from "axios"
 import PlayerCard from "./playerCard"
 
+
+
+
 class PlayerList extends React.Component {
     constructor(props){
         super(props);
@@ -24,11 +27,14 @@ class PlayerList extends React.Component {
 
     
 
-    render() {
+    render(props) {
         return (
                 <div>
                    {this.state.players.map(player => (
-                       <PlayerCard key={player.id} name={player.name} country={player.country} searches={player.searches} />
+                       <div className='card'>
+                        <PlayerCard key={player.id} name={player.name} country={player.country} searches={player.searches} />
+                    
+                       </div>
                    ))} 
                 </div>
 
