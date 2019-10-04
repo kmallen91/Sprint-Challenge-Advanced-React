@@ -29,7 +29,7 @@ class PlayerList extends React.Component {
 
     render(props) {
         return (
-                <div className='card-container'>
+                <div data-testid ='card-container' className='card-container'>
                    {this.state.players.map(player => (
                        <div className='player'>
                         <PlayerCard key={player.id} name={player.name} country={player.country} searches={player.searches} />
